@@ -85,7 +85,8 @@ int main()
         exit(0);
     }
 
-    fputs("\n\n\t\t\t\t          ---------------\n\t\t\t\t\tStar\n\t\t\t\t             --------------\n\n\n",file);
+    fputs("\n\n\t\t\t\t       ---------------\n\t\t\t\t\tStar\n\t\t\t\t             --------------\n\n\n",file);
+    printf("\n\n\t\t\t\t       ---------------\n\t\t\t\t\t Welcome \n\t\t\t\t      --------------\n\n\n",file);
     int choice;
     do
     {
@@ -118,47 +119,46 @@ int main()
 
                     if (choiceOp == 1)
                     {
+//****************************************************************************************************//
                         file = fopen("Inventory Management System.txt", "a");
                         if (file == NULL)
                         {
                             printf("File cannot be opened\n");
                             return;
                         }
-
+//***************************************************************************************************//
                         int id, quantity;
                         char name[50], dateOfEx[30];
                         float price;
 
                         printf("Enter Product ID: ");
                         scanf("%d", &id);
-                        fputs("\n\nAdd product: \nEnter Product ID: ", file);
-                        fprintf(file, "%d", id);
-
                         getchar();  // Consuming newline character
-
                         printf("Enter Product Name: ");
                         gets(name);
-                        fputs("\nProduct Name: ", file);
-                        fputs(name, file);
-
                         printf("Enter Product Price: ");
                         scanf("%f", &price);
-                        fputs("\nProduct Price: ", file);
-                        fprintf(file, "%.3f ", price);
-
                         printf("Enter Product Quantity: ");
                         scanf("%d", &quantity);
-                        fputs("\nProduct Quantity: ", file);
-                        fprintf(file, "%d", quantity);
-
                         printf("Enter Product Expiry Date: ");
                         getchar();  // Consuming newline character
                         gets(dateOfEx);
+
+//*****************************************************************************************************//
+                        fputs("\n\nAdd product: \nEnter Product ID: ", file);
+                        fprintf(file, "%d", id);
+                        fputs("\nProduct Name: ", file);
+                        fputs(name, file);
+                        fputs("\nProduct Price: ", file);
+                        fprintf(file, "%.3f ", price);
+                        fputs("\nProduct Quantity: ", file);
+                        fprintf(file, "%d", quantity);
                         fputs("\nProduct Expiry Date: ", file);
                         fputs(dateOfEx, file);
 
                         fputs("\n\n", file);
                         fclose(file);
+//**************************************************************************************************//
                         addProduct(id, name, price, quantity, dateOfEx);
 
 
@@ -166,12 +166,14 @@ int main()
 
                     if (choiceOp == 2)
                     {
+//**************************************************************************************************//
                         file = fopen("Inventory Management System.txt", "a");
                         if (file == NULL)
                         {
                             printf("File cannot be opened\n");
                             return;
                         }
+//**************************************************************************************************//
                         int id;
                         printf("Enter the ID of the product to update: ");
                         scanf("%d", &id);
@@ -180,12 +182,15 @@ int main()
                     }
                     if (choiceOp == 3)
                     {
+//*************************************************************************************************//
                         file = fopen("Inventory Management System.txt", "a");
                         if (file == NULL)
                         {
                             printf("File cannot be opened\n");
                             return;
                         }
+//***********************************************************************************************//
+
                         int id;
                         printf("Enter the ID of the product to remove: ");
                         scanf("%d", &id);
@@ -195,12 +200,14 @@ int main()
 
                     if (choiceOp == 4)
                     {
+//**********************************************************************************************//
                         file = fopen("Inventory Management System.txt", "a");
                         if (file == NULL)
                         {
                             printf("File cannot be opened\n");
                             return;
                         }
+//*********************************************************************************************//
                         int s_v;
                         do
                         {
@@ -247,12 +254,15 @@ int main()
 
                     if (choiceOp == 6)
                     {
+//*********************************************************************************************************//
                         file = fopen("Inventory Management System.txt", "a");
                         if (file == NULL)
                         {
                             printf("File cannot be opened\n");
                             return;
                         }
+//********************************************************************************************************//
+
                         // Calculate Cost
                         int customerId;
                         printf("Enter Customer ID to calculate cost: ");
@@ -263,12 +273,15 @@ int main()
 
                     if (choiceOp == 7)
                     {
+//********************************************************************************************************//
                         file = fopen("Inventory Management System.txt", "a");
                         if (file == NULL)
                         {
                             printf("File cannot be opened\n");
                             return;
                         }
+//*******************************************************************************************************//
+
                         // Add New Supplier
                         int supplierId;
                         char supplierName[50];
@@ -276,21 +289,21 @@ int main()
 
                         printf("Enter Supplier ID: ");
                         scanf("%d", &supplierId);
-                        fputs("\n\nNew Supplier: ", file);
-                        fprintf(file, "\nSupplier ID: %d", supplierId);
-
                         getchar();  // Consume the newline character in the input buffer
-
                         printf("Enter Supplier Name: ");
                         fgets(supplierName, sizeof(supplierName), stdin);
-                        fputs("\nSupplier Name: ", file);
-                        fputs(supplierName, file);
-
                         printf("Enter Supplier Contact Information: ");
                         fgets(supplierContactInfo, sizeof(supplierContactInfo), stdin);
+
+ //*************************************************************************************************************//
+                         fputs("\n\nNew Supplier: ", file);
+                        fprintf(file, "\nSupplier ID: %d", supplierId);
+                        fputs("\nSupplier Name: ", file);
+                        fputs(supplierName, file);
                         fputs("\nSupplier Contact Information: ", file);
                         fputs(supplierContactInfo, file);
                         fclose(file);
+//*************************************************************************************************************//
                         addSupplier(supplierId, supplierName, supplierContactInfo);
 
                     }
@@ -1253,7 +1266,3 @@ int displayMenu()
 
     return choiceOp;
 }
-
-
-
-
