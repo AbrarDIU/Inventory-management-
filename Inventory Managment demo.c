@@ -56,22 +56,22 @@ int isSignedIn = 0;
 
 //-------(All function)-------//
 //-----------------------------------------------------------------------------------------------------------//
-int displayMenu();
-int login();
-void changePassword();
-void setPasswordAndUsername();
-void alertsAndNotifications();
-void associateSupplierWithProduct(int productId, int supplierId);
-void displaySuppliers();
-void addSupplier(int id, const char name[], const char contactInfo[]);
-void calculateCost(int customerId);
-void recordCustomerPurchase();
-void searchProductByID(int id);
-void searchProductByName(const char name[]);
-void displayInventory();
-void removeProduct(int id);
-void updateProduct(int id);
-void addProduct(int id, const char name[], float price, int quantity, const char Ex_date[]);
+int displayMenu();//1249
+int login();//1162
+void changePassword();//1117
+void setPasswordAndUsername();//1068
+void alertsAndNotifications();//999
+void associateSupplierWithProduct(int productId, int supplierId);//926
+void displaySuppliers();//881
+void addSupplier(int id, const char name[], const char contactInfo[]);//848
+void calculateCost(int customerId);//808
+void recordCustomerPurchase();//718
+void searchProductByID(int id);//664
+void searchProductByName(const char name[]);//609
+void displayInventory();//557
+void removeProduct(int id);//499
+void updateProduct(int id);//405
+void addProduct(int id, const char name[], float price, int quantity, const char Ex_date[]);//364
 //--------------------------------------------------------------------------------------------------------------//
 
 int main()
@@ -495,6 +495,7 @@ void updateProduct(int id)
     printf("Product with ID %d not found.\n", id);
 }
 
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
 // Function to remove a product by ID
 void removeProduct(int id)
 {
@@ -553,6 +554,7 @@ void removeProduct(int id)
     printf("Product with ID %d not found.\n",id);
 }
 
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
 // Function to display the inventory
 void displayInventory()
 {
@@ -605,6 +607,7 @@ void displayInventory()
     fclose(file);
 }
 
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
 // Function to search for a product by name
 void searchProductByName(const char name[])
 {
@@ -660,6 +663,7 @@ void searchProductByName(const char name[])
     fclose(file);
 }
 
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
 // Function to search for a product by ID
 void searchProductByID(int id)
 {
@@ -713,7 +717,7 @@ void searchProductByID(int id)
     fclose(file);
 }
 
-
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
 // Function to record customer purchases
 void recordCustomerPurchase()
 {
@@ -803,7 +807,7 @@ void recordCustomerPurchase()
     printf("\nProduct with ID %d not found.\n");
 }
 
-
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
 // Function to calculate the total cost for a specific customer
 void calculateCost(int customerId)
 {
@@ -844,6 +848,7 @@ void calculateCost(int customerId)
     fclose(file);
 }
 
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
 // Function to add a new supplier
 void addSupplier(int id, const char name[], const char contactInfo[])
 {
@@ -877,6 +882,7 @@ void addSupplier(int id, const char name[], const char contactInfo[])
     //.........................................................//
 }
 
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
 // Function to display the list of suppliers
 void displaySuppliers()
 {
@@ -922,6 +928,7 @@ void displaySuppliers()
     fclose(file);
 }
 
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
 // Function to associate a supplier with a product
 void associateSupplierWithProduct(int productId, int supplierId)
 {
@@ -995,6 +1002,7 @@ void associateSupplierWithProduct(int productId, int supplierId)
     fclose(file);
 }
 
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
 // Function to handle alerts and notifications
 void alertsAndNotifications()
 {
@@ -1064,6 +1072,7 @@ void alertsAndNotifications()
     fclose(file);
 }
 
+//&^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/
 // Function to set or change the password and username
 void setPasswordAndUsername()
 {
@@ -1113,6 +1122,7 @@ void setPasswordAndUsername()
     fclose(file);
 }
 
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 // Function to change the password
 void changePassword()
 {
@@ -1158,7 +1168,7 @@ void changePassword()
     }
 }
 
-
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^6
 int login()
 {
     int attempts = 0;
@@ -1244,7 +1254,7 @@ int login()
     return 0; // Access denied
 }
 
-
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
 // Function to display the menu and get user's choice
 int displayMenu()
 {
@@ -1266,3 +1276,7 @@ int displayMenu()
 
     return choiceOp;
 }
+
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
+
+
